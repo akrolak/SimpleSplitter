@@ -5733,8 +5733,8 @@ var SolidityEvent = require("web3/lib/web3/event.js");
     ],
     "unlinked_binary": "0x606060405234610000575b60008054600160a060020a03191633600160a060020a03161790555b5b610190806100366000396000f300606060405263ffffffff60e060020a6000350416630900f0108114610045578063445df0ac146100605780638da5cb5b1461007f578063fdacd576146100a8575b610000565b346100005761005e600160a060020a03600435166100ba565b005b346100005761006d61012d565b60408051918252519081900360200190f35b346100005761008c610133565b60408051600160a060020a039092168252519081900360200190f35b346100005761005e600435610142565b005b6000805433600160a060020a03908116911614156101275781905080600160a060020a031663fdacd5766001546040518263ffffffff1660e060020a02815260040180828152602001915050600060405180830381600087803b156100005760325a03f115610000575050505b5b5b5050565b60015481565b600054600160a060020a031681565b60005433600160a060020a039081169116141561015f5760018190555b5b5b505600a165627a7a723058201d3afcd87c8de0b4fbab1b23cc3dec522eaab42e8f7cf31022d37ce83f8c13750029",
     "events": {},
-    "updated_at": 1487430336353,
-    "address": "0xb43f2aa6fbc80886368b4d1182647a1080bbf685",
+    "updated_at": 1487525333986,
+    "address": "0x9f1504b2f14f51fe50c2e51f54b200b5baa852a4",
     "links": {}
   }
 };
@@ -6217,7 +6217,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   "default": {
     "abi": [
       {
-        "constant": false,
+        "constant": true,
         "inputs": [],
         "name": "getBalance",
         "outputs": [
@@ -6230,14 +6230,14 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "type": "function"
       },
       {
-        "constant": false,
+        "constant": true,
         "inputs": [
           {
-            "name": "ad",
-            "type": "address"
+            "name": "no",
+            "type": "int256"
           }
         ],
-        "name": "getAccountBalance",
+        "name": "getNoBalance",
         "outputs": [
           {
             "name": "",
@@ -6261,82 +6261,29 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "type": "function"
       },
       {
-        "inputs": [],
+        "inputs": [
+          {
+            "name": "ada",
+            "type": "address"
+          },
+          {
+            "name": "adb",
+            "type": "address"
+          },
+          {
+            "name": "adc",
+            "type": "address"
+          }
+        ],
         "payable": true,
         "type": "constructor"
       },
       {
         "payable": true,
         "type": "fallback"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "name": "_from",
-            "type": "address"
-          },
-          {
-            "indexed": true,
-            "name": "_to",
-            "type": "address"
-          },
-          {
-            "indexed": false,
-            "name": "_value",
-            "type": "uint256"
-          }
-        ],
-        "name": "Transfer",
-        "type": "event"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "name": "_from",
-            "type": "address"
-          },
-          {
-            "indexed": true,
-            "name": "_to",
-            "type": "address"
-          },
-          {
-            "indexed": false,
-            "name": "_value",
-            "type": "uint256"
-          }
-        ],
-        "name": "Payable_f",
-        "type": "event"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "name": "_from",
-            "type": "address"
-          },
-          {
-            "indexed": true,
-            "name": "_to",
-            "type": "address"
-          },
-          {
-            "indexed": false,
-            "name": "_value",
-            "type": "int256"
-          }
-        ],
-        "name": "Debug",
-        "type": "event"
       }
     ],
-    "unlinked_binary": "0x606060405260028054600160a060020a0319908116739373979f56b0c14eb048338a2405fd5eaf7792f71790915560038054821673240a31caf6b70a4eac83aec566fcea0c2f6b4fcb17905560048054909116730523125a2d04bdeb3114729ad7b418f41b2d8f691790555b60008054600160a060020a03191633600160a060020a03161790555b5b6101e5806100976000396000f3006060604052361561003b5763ffffffff60e060020a60003504166312065fe081146100a957806393423e9c146100c8578063b603cd80146100f3575b6100a75b600254604080513481529051600160a060020a03928316923316917f8a9fed4ae6d013aa3dd7c42e42bbc0e7ab9a1fdb33580c2700012b0ff0334a3f919081900360200190a3600160a060020a0333166000908152600160205260409020805434900390555b565b005b34610000576100b6610114565b60408051918252519081900360200190f35b34610000576100b6600160a060020a0360043516610170565b60408051918252519081900360200190f35b346100005761010061018f565b604080519115158252519081900360200190f35b6002546040805130600160a060020a0390811631825291516000938316923316917f920bf79d90e87b063af310acd47acb99857d74d2fc34af8d591172522990582b919081900360200190a350600160a060020a033016315b90565b600160a060020a0381166000908152600160205260409020545b919050565b6000805433600160a060020a039081169116141561016d57600054600160a060020a0316ff5b5b905600a165627a7a72305820fedaa54d6911c4d9a9a4d9065354cc5a1386c770540da92126d02915690a50650029",
+    "unlinked_binary": "0x60606040526000600455600060055560006006556040516060806102c38339810160409081528151602083015191909201515b60008054600160a060020a03338116600160a060020a031992831617909255600180548684169083161790556002805485841690831617905560038054928416929091169190911790555b5050505b610233806100906000396000f3006060604052361561003b5763ffffffff60e060020a60003504166312065fe08114610075578063af0e8b2314610094578063b603cd80146100b6575b6100735b60015433600160a060020a039081169116141561006f5761005f346100d7565b151561006f576004805434900390555b5b5b565b005b346100005761008261018d565b60408051918252519081900360200190f35b346100005761008260043561019c565b60408051918252519081900360200190f35b34610000576100c36101dd565b604080519115158252519081900360200190f35b6000600060008330600160a060020a03163110156100f85760009250610186565b6002846005805492909104918201905560068054828703908101909155600254604051929450909250600160a060020a03169083156108fc029084906000818181858888f19350505050151561014d57610000565b600354604051600160a060020a039091169082156108fc029083906000818181858888f19350505050151561018157610000565b600192505b5050919050565b600160a060020a033016315b90565b600081600114156101b057506004546101d8565b81600214156101c257506005546101d8565b81600314156101d457506006546101d8565b5060005b919050565b6000805433600160a060020a039081169116141561019957600054600160a060020a0316ff5b5b905600a165627a7a72305820154e9fd86b455ffabbc18b7bd5d7abf79f52a1a4f4912c84bd13126cd18778090029",
     "events": {
       "0x8a9fed4ae6d013aa3dd7c42e42bbc0e7ab9a1fdb33580c2700012b0ff0334a3f": {
         "anonymous": false,
@@ -6427,9 +6374,9 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "type": "event"
       }
     },
-    "updated_at": 1487430336360,
+    "updated_at": 1487525914876,
     "links": {},
-    "address": "0x7931c357d2b1b4e70994ffb1b4ee964a32a7fb67"
+    "address": "0x3c45260ef6a547d06949feea65ea38e6eee32f54"
   }
 };
 
@@ -43792,11 +43739,11 @@ var bob_account;
 var carol_account;
 
 // Your deployed address changes every time you deploy.
-var ssAddress = "0x7931c357d2b1b4e70994ffb1b4ee964a32a7fb67"; // <-- Put your own
+var ssAddress = "0x3c45260ef6a547d06949feea65ea38e6eee32f54"; // <-- Put your own
 
-var adAlice = 0x9373979f56b0c14eb048338a2405fd5eaf7792f7;
-var adBob = 0x240a31caf6b70a4eac83aec566fcea0c2f6b4fcb;
-var adCarol = 0x0523125a2d04bdeb3114729ad7b418f41b2d8f69;
+/*var adAlice = 0x9373979f56b0c14eb048338a2405fd5eaf7792f7;
+var adBob = 0x240a31caf6b70a4eac83aec566fcea0c2f6b4fcb; 
+var adCarol = 0x0523125a2d04bdeb3114729ad7b418f41b2d8f69;*/
 
 function setStatus(message) {
   var status = document.getElementById("status");
@@ -43804,8 +43751,7 @@ function setStatus(message) {
 };
 
 function refreshBalance() {
-
-  console.log("Started refreshing balances");    
+ 
   var ss = SimpleSplitter.deployed();
 
   ss.getBalance.call({from: alice_account}).then(function(value) {
@@ -43817,20 +43763,7 @@ function refreshBalance() {
     setStatus("Error getting splitter balance; see log.");
   });
 
-  var deb = ss.Debug();
-  deb.watch(function(err, result) {
-    if (err) {
-      console.log(err)
-      return;
-    }
-    console.log("Debug returned");
-    //console.log("From="+result.args._from+" To="+result.args._to);
-    console.log(result.args._from);
-    console.log(result.args._to);
-    console.log(result.args._value.toString(10));      
-  });
-
-  ss.getAccountBalance.call(adAlice, {from: alice_account}).then(function(value) {
+  ss.getNoBalance.call(1, {from: alice_account}).then(function(value) {
     var alice_element = document.getElementById("alice");
     var alice_value = web3.fromWei(value.valueOf(), 'ether');
     alice_element.innerHTML = alice_value;
@@ -43839,7 +43772,7 @@ function refreshBalance() {
     setStatus("Error getting Alice balance; see log.");
   });
 
-  ss.getAccountBalance.call(adBob, {from: alice_account}).then(function(value) {
+  ss.getNoBalance.call(2, {from: alice_account}).then(function(value) {
     var bob_element = document.getElementById("bob");
     var bob_value = web3.fromWei(value.valueOf(), 'ether');
     bob_element.innerHTML = bob_value;
@@ -43848,16 +43781,14 @@ function refreshBalance() {
     setStatus("Error getting Bob balance; see log.");
   });
 
-  ss.getAccountBalance.call(adCarol, {from: alice_account}).then(function(value) {
+  ss.getNoBalance.call(3, {from: alice_account}).then(function(value) {
     var carol_element = document.getElementById("carol");
     var carol_value = web3.fromWei(value.valueOf(), 'ether');
     carol_element.innerHTML = carol_value;
   }).catch(function(e) {
     console.log(e);
     setStatus("Error getting Carol balance; see log.");
-  });
-
-  console.log("Ended refreshing balances");    
+  }); 
 
 };
 
@@ -43865,46 +43796,10 @@ function sendCoin() {
   var amount = parseInt(document.getElementById("amount").value);
   var ss = SimpleSplitter.deployed();
 
-  var pay_f = ss.Payable_f();
-  pay_f.watch(function(err, result) {
-    if (err) {
-      console.log(err)
-      return;
-    }
-    //console.log(pay_f);
-    //console.log("From="+result.args._from+" To="+result.args._to);
-    console.log("Payable function has been triggered");    
-    console.log(result.args._from);
-    console.log(result.args._to);
-    console.log(result.args._value.toString(10));       
-  });
-
-  /*var deb = ss.Debug();
-  deb.watch(function(err, result) {
-    if (err) {
-      console.log(err)
-      return;
-    }
-    console.log("Debug returned");
-    //console.log("From="+result.args._from+" To="+result.args._to);
-    console.log(result.args._from);
-    console.log(result.args._to);
-    console.log(result.args._value.toString(10));      
-  });*/
-
-  var tran = ss.Transfer();
-  tran.watch(function(err, result) {
-    if (err) {
-      console.log(err)
-      return;
-    }
-    console.log("Transfer has been made");
-    //console.log("From="+result.args._from+" To="+result.args._to);
-    console.log(result.args._from);
-    console.log(result.args._to);
-    console.log(result.args._value.toString(10));    
-  });
-
+  if(amount == 0) {
+    setStatus("Invalid amount, please provide natural number");
+    return;
+  }
 
   setStatus("Initiating transaction... (please wait)");
 
@@ -43918,23 +43813,6 @@ function sendCoin() {
   setStatus("Transaction complete!");
   refreshBalance();
 };
-
-
-/*var exampleEvent = exampleContract.ReturnValue({_from: web3.eth.coinbase});
-exampleEvent.watch(function(err, result) {
-  if (err) {
-    console.log(err)
-    return;
-  }
-  console.log(result.args._value)
-  // check that result.args._from is web3.eth.coinbase then
-  // display result.args._value in the UI and call    
-  // exampleEvent.stopWatching()
-})
-exampleContract.foo.sendTransaction(2, {from: web3.eth.coinbase})*/
-
-
-
 
 
 window.onload = function() {
