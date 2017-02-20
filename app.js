@@ -5,8 +5,6 @@ var carol_account;
 
 var adAlice, adBob, adCarol;
 
-// Your deployed address changes every time you deploy.
-var ssAddress = "0xb92f743a4406f47062eae4664b70bada7e5c2f68"; // <-- Put your own
 
 function setStatus(message) {
   var status = document.getElementById("status");
@@ -20,7 +18,7 @@ function refreshBalance() {
   ss.getBalance.call({from: alice_account}).then(function(value) {
     var balance_element = document.getElementById("balance");
     var eth_value = web3.fromWei(value.valueOf(), 'ether');
-    balance_element.innerHTML = eth_value;
+    balance_element.innerText = eth_value;
   }).catch(function(e) {
     console.log(e);
     setStatus("Error getting splitter balance; see log.");
@@ -69,6 +67,8 @@ function sendCoin() {
   }
 
   setStatus("Initiating transaction... (please wait)");
+
+  var ssAddress = ss.address;
 
   var txn = web3.eth.sendTransaction({ 
       from: web3.eth.coinbase, 
